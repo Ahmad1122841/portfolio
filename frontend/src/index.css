@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* ---------- Our design colors ---------- */
+@theme {
+  --color-dark: #0d1317;     /* page background */
+  --color-card: #141c21;     /* cards / navbar pill */
+  --color-accent: #1fb5a5;   /* teal color  buttons*/
+  --color-light: #f1f5f4;    /* main text color*/
+  --color-muted: #8a959c;    /* secondary text */
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* ---------- Base styles ---------- */
+html {
+  scroll-behavior: smooth; /* smooth scrolling when clicking nav links */
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+}
+
+/* Sections should not hide under the fixed navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ---------- Reusable classes ---------- */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3
+           font-medium text-white shadow-lg shadow-accent/30
+           transition hover:brightness-110;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10
+           px-6 py-3 font-medium text-light transition hover:border-accent hover:text-accent;
+  }
+    /* Small teal uppercase label above section headings ("ABOUT ME") */
+  .section-label {
+    @apply text-sm font-medium uppercase tracking-widest text-accent;
+  }
+
+  /* Dark rounded card used in many sections */
+  .card {
+    @apply rounded-3xl border border-white/5 bg-card p-6;
+  }
+    /* Small pill used for technology names */
+  .tag {
+    @apply rounded-full border border-white/5 bg-white/5 px-4 py-1.5 text-sm text-muted;
+  }
+
+    /* Text fields and textarea in the contact form */
+  .input {
+    @apply w-full rounded-2xl border border-white/5 bg-white/5 px-6 py-4 text-light
+           placeholder:text-muted/70 outline-none transition
+           focus:border-accent focus:ring-2 focus:ring-accent/20;
+  }
+}
