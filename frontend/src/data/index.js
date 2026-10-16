@@ -45,25 +45,25 @@ export const projects = [
   {
     title: "Restuarent Managment System",
     description:
-      "An restuarent managment application where you can order different food add to cart and payment.",
+      "A restuarent managment application where you can order different food add to cart and payment.",
     image: project2,
     tags: ["React", "Spring Boot", "MySQL"],
     link: "https://github.com/Ahmad1122841/Foodies-Application.git",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Hospital Management System",
     description:
-      "An AI-powered writing assistant that helps users draft, edit, and improve their content.",
+      "A Hospital managment system where you find differnt doctors and book with him.",
     image: project3,
-    tags: ["Next.js", "OpenAI", "Tailwind"],
+    tags: ["React.js", "MySQL", "Next.js"],
     link: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Smart Contact Manager",
     description:
-      "A task management application for organizing projects, tracking progress, and collaborating with teams.",
+      "A Smart Contact Manager where you can store your important detils to be secure.",
     image: project4,
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: ["Thymleaf", "Spring boot", "MySQL"],
     link: "#",
   },
 ];
